@@ -12,7 +12,7 @@ AssetBake Lite is a free, open-source Blender add-on that turns an AI-generated 
 
 [Download the latest release](https://github.com/mendbox/assetbake-lite/releases/latest)
 
-**Get the full AssetBake: up to 50,000 triangles, 2k/4k textures, roughness, metallic, emission and alpha maps, one asset per part, DirectX normal maps, Quad-dominant mode → [Gumroad](https://quadfix.gumroad.com/l/assetbake) | [Superhive](https://superhivemarket.com/products/assetbake)**
+**Get the full AssetBake: up to 50,000 triangles, 2k/4k textures, roughness, metallic, emission and alpha maps, one asset per part, DirectX normal maps, Quad-dominant mode → [Gumroad](https://mendbox.gumroad.com/l/assetbake) | [Superhive](https://superhivemarket.com/products/assetbake)**
 
 ## What Lite does
 
@@ -64,7 +64,7 @@ AssetBake Lite is a free, open-source Blender add-on that turns an AI-generated 
 | **Quad-dominant mode** (quads on thick parts, triangles on thin parts) | no | yes (macOS Apple Silicon, Linux x86-64) |
 | Background job, cancel, undo | yes | yes |
 
-Lite stays free for everything marked "yes". Get the full version on [Gumroad](https://quadfix.gumroad.com/l/assetbake) or [Superhive](https://superhivemarket.com/products/assetbake).
+Lite stays free for everything marked "yes". Get the full version on [Gumroad](https://mendbox.gumroad.com/l/assetbake) or [Superhive](https://superhivemarket.com/products/assetbake).
 
 ## Install (Blender 4.2 and newer)
 
@@ -88,7 +88,7 @@ Import the model, select it, press **Make Game Asset**, then export GLB from the
 It works offline and never touches the network. Your source model is hidden, not modified.
 
 ### Why only 1k and 5,000 triangles?
-That is the Lite limit. The full version removes it: [Gumroad](https://quadfix.gumroad.com/l/assetbake) | [Superhive](https://superhivemarket.com/products/assetbake).
+That is the Lite limit. The full version removes it: [Gumroad](https://mendbox.gumroad.com/l/assetbake) | [Superhive](https://superhivemarket.com/products/assetbake).
 
 ### Is it a retopology tool?
 No. Lite gives a triangle mesh that reproduces your shape within the budget.
@@ -99,7 +99,7 @@ No. Lite gives a triangle mesh that reproduces your shape within the budget.
 
 ## Get the full AssetBake
 
-Need more than 5,000 triangles, 2k/4k textures, roughness/metallic/emission/alpha maps, one asset per part or DirectX normals? **[Get the full AssetBake on Gumroad](https://quadfix.gumroad.com/l/assetbake)** or [on Superhive](https://superhivemarket.com/products/assetbake).
+Need more than 5,000 triangles, 2k/4k textures, roughness/metallic/emission/alpha maps, one asset per part or DirectX normals? **[Get the full AssetBake on Gumroad](https://mendbox.gumroad.com/l/assetbake)** or [on Superhive](https://superhivemarket.com/products/assetbake).
 
 ## License
 
