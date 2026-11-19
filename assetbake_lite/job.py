@@ -40,7 +40,7 @@ def log_path():
 def kill_tree(proc):
     if proc.poll() is not None:
         return
-    if os.name == "nt":            # Windows branch: written from the documentation, not run on Windows yet
+    if os.name == "nt":
         subprocess.run(["taskkill", "/PID", str(proc.pid), "/T", "/F"],
                        creationflags=subprocess.CREATE_NO_WINDOW, capture_output=True)
     else:

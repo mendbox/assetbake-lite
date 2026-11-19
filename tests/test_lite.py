@@ -123,6 +123,10 @@ check("worker clamp: mode, budget, texture, scope, maps", clamp["mode"] == "GAME
           "basecolor": True, "roughness": False, "metallic": False, "emission": False, "alpha": False, "ao": True}, str(clamp))
 res = run(OP.make)
 check("nothing selected: refused", isinstance(res, str) and "Select" in res, str(res)[:50])
+# 1.0.4: the Export box is drawn only when there is something to export; the panel names a source under the budget
+check("no result yet: nothing to export (Export box hidden)", ops.export_targets(bpy.context) == [])
+check("under the budget: the panel says nothing is reduced", "nothing to reduce" in ops.game_outlook(900, 1000, "SELECTION")
+      and ops.game_outlook(1001, 1000, "SELECTION") == "")
 
 # ---------------------------------------------------------------------- B: a 16k-triangle sphere, budget 5,000
 p = fresh()
@@ -139,6 +143,7 @@ if rep.get("ok"):
     assets = [bpy.data.objects[n] for n in rep["objects"]]
     a = assets[0]
     check("one asset", len(assets) == 1)
+    check("after a result: something to export (Export box shown)", ops.export_targets(bpy.context) == assets)
     told = " | ".join(m[1] for m in rep.get("messages", []))
     check("result box: one model-specific upsell line with the URL", told.count("Full AssetBake:") == 1 and const.FULL_URL in told, told[:200])
     print("UPSELL", told[:300], flush=True)

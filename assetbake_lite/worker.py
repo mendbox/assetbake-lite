@@ -66,7 +66,7 @@ def emit(event, **fields):
 
 
 def _windows_parent_alive(pid, _handle=[]):
-    """Windows branch (written from the documentation, not run on Windows yet): wait on the parent's handle."""
+    """Windows: ask the parent's process handle whether it is still running."""
     import ctypes
     from ctypes import wintypes
     kernel = ctypes.windll.kernel32

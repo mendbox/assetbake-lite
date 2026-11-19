@@ -103,6 +103,10 @@ class ASSETBAKELITE_PT_panel(Panel):
                         text = "Estimating the quad share..."
                 if text:
                     wrapped(info, context, text, dict(INFO="INFO", WARNING="ERROR", ERROR="CANCEL")[level])
+            elif not quads and tris <= const.REFUSE_TRIS:
+                text = ops.game_outlook(tris, p.budget(), "SELECTION")
+                if text:
+                    wrapped(info, context, text, "INFO")
         row = layout.row()
         row.scale_y = 1.6
         row.enabled = bool(objs) and tris <= const.REFUSE_TRIS and not (quads and p.budget() < const.QUAD_MIN_BUDGET)
@@ -152,7 +156,9 @@ class ASSETBAKELITE_PT_result(Panel):
             wrapped(layout, context, "For another version (other budget or textures), get the source back:")
             layout.operator(const.OPERATOR + ".select_source", icon="RESTRICT_SELECT_OFF").last = True
 
-        if context.mode != "OBJECT":
+        # the Export box only when there is something to export (a selected asset, or the assets of the last run):
+        # not before the first result, not after a cancelled or failed run that left none
+        if context.mode != "OBJECT" or not ops.export_targets(context):
             return
         box = layout.box()
         box.label(text="Export", icon="EXPORT")

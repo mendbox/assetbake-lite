@@ -144,6 +144,14 @@ def quad_outlook(tris, budget, scope):
     return ("INFO", "", True)
 
 
+def game_outlook(tris, budget, scope):
+    """What the panel says in Game mode before the run: the sentence for a source that is already under the
+    budget, else "". With one asset per part every part has its own count, so nothing is said."""
+    if scope == "PARTS" or not 0 < tris <= budget:
+        return ""
+    return "The source has {:,} triangles, under the budget of {:,}: nothing to reduce, it is kept as it is.".format(tris, budget)
+
+
 def upsell_line(context, objs):
     """Lite only: one line about the full version, specific to the model. The thin-surface estimate is the scene-ray
     one (pure Python, no compiled module), asked at the budget the Quad-dominant mode is tuned for."""

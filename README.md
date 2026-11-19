@@ -61,7 +61,7 @@ AssetBake Lite is a free, open-source Blender add-on that turns an AI-generated 
 | Maps | Base colour, AO + normal | + roughness, metallic (packed ORM), emission, alpha |
 | Scope | one asset for the selection | + one asset per part |
 | Normal map convention | OpenGL | OpenGL and DirectX |
-| **Quad-dominant mode** (quads on thick parts, triangles on thin parts) | no | yes (macOS Apple Silicon, Linux x86-64) |
+| **Quad-dominant mode** (quads on thick parts, triangles on thin parts) | no | yes (macOS, Windows, Linux) |
 | Background job, cancel, undo | yes | yes |
 
 Lite stays free for everything marked "yes". Get the full version on [Gumroad](https://mendbox.gumroad.com/l/assetbake) or [Superhive](https://superhivemarket.com/products/assetbake).
@@ -74,7 +74,7 @@ Lite stays free for everything marked "yes". Get the full version on [Gumroad](h
 
 ## Platforms
 
-Pure Python with Blender's own modules, no internet access, no compiled code. Tested on macOS (Apple Silicon); Game mode also verified on Linux. Not yet run on Windows by us: it should work, reports welcome.
+Pure Python with Blender's own modules, no internet access, no compiled code. Tested on macOS (Apple Silicon); Game mode also verified on Linux. Lite itself is not tested on Windows (the same Game-mode code is tested in the full AssetBake on Windows).
 
 ## FAQ
 

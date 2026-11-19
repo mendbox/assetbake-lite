@@ -8,8 +8,11 @@ only looks whether the folder for this system is there and hands the path to the
 (Quad-dominant mode). Without a folder for this system the mode is switched off with a message and Game mode works
 as before.
 
-  platform    macos_arm64, linux_x64 (windows_x64: no build yet)
+  platform    macos_arm64, macos_x64, linux_x64, windows_x64 (Windows on ARM: no build)
   python tag  cp311 for Python 3.11 (Blender 4.2 / 4.5), abi3 for Python 3.12 and newer (Blender 5.x)
+
+The module file inside is named by its builder (_core.abi3.so, _core.cpython-311-darwin.so, _core.pyd,
+_core.cp311-win_amd64.pyd): Python's importer finds it, nothing here spells the name.
 
 Licences of what is inside the binary: vendor/THIRD_PARTY.md and vendor/licenses/.
 """

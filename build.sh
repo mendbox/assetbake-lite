@@ -11,6 +11,6 @@ find "$HERE/assetbake_lite" -name __pycache__ -type d -prune -exec rm -rf {} +
 "$HERE/tests/bl.sh" 52 build --command extension validate "$ZIP" || exit 1
 # Lite carries no compiled remesher and no vendor folder
 unzip -l "$ZIP" | grep -q " vendor/" && { echo "vendor/ must NOT be in the Lite zip"; exit 1 }
-unzip -l "$ZIP" | grep -q "\.so$" && { echo "a compiled module is in the Lite zip"; exit 1 }
+unzip -l "$ZIP" | grep -qE "\.(so|pyd|dylib|dll)$" && { echo "a compiled module is in the Lite zip"; exit 1 }
 unzip -l "$ZIP" | grep -q " LICENSE$" || { echo "MISSING in the zip: LICENSE"; exit 1 }
 echo "BUILT $ZIP ($(stat -f %z "$ZIP") bytes, $(unzip -l "$ZIP" | tail -1 | awk '{print $2}') files, no vendor folder)"
