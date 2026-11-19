@@ -1,4 +1,4 @@
-# AssetBake Lite — Blender add-on: AI-generated mesh to a game-ready low-poly asset
+# AssetBake Lite - AI Mesh to Low Poly Game Asset (free Blender add-on for Meshy, Tripo, Hunyuan3D models)
 
 Website: https://mendboxstudio.com/addons/assetbake
 

@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
-"""Names in one place. The product name comes from blender_manifest.toml; nothing else spells it out."""
+"""Names in one place. The short product name is ADDON_NAME; the long store name (SEO) lives in blender_manifest.toml."""
 import os
 import tomllib
 
@@ -16,7 +16,8 @@ def _manifest():
 
 _M = _manifest()
 ADDON_ID = _M.get("id", "assetbake_lite")
-ADDON_NAME = _M.get("name", "AssetBake Lite")
+STORE_NAME = _M.get("name", "AssetBake Lite - AI Mesh to Low Poly Game Asset")   # the long keyword name of the store listing (manifest); never shown in the UI
+ADDON_NAME = "AssetBake Lite"            # the short product name: sidebar tab, panel titles, messages
 VERSION = _M.get("version", "?")
 
 TAB = ADDON_NAME                    # sidebar tab
