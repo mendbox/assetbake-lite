@@ -14,6 +14,8 @@ AssetBake Lite is a free, open-source Blender add-on that turns an AI-generated 
 
 **Get the full AssetBake: up to 50,000 triangles, 2k/4k textures, roughness, metallic, emission and alpha maps, one asset per part, DirectX normal maps, Quad-dominant mode → [Gumroad](https://mendbox.gumroad.com/l/assetbake) | [Superhive](https://superhivemarket.com/products/assetbake)**
 
+Also on Blendkit (installs from inside Blender): [Lite](https://www.blendkit.com/asset-gallery-detail/496bc114-a19e-45ff-8862-312271f50c0e/) | [full version](https://www.blendkit.com/asset-gallery-detail/c85a3662-5ba0-46c1-b3e7-061d966226bf/)
+
 ## What Lite does
 
 ![Blender AI mesh to game asset in one click: Make Game Asset turns a dense AI model into a low-poly asset with textures](docs/media/assetbake-oneclick.gif)
