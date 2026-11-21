@@ -109,6 +109,12 @@ def main():
     with open(job_file, encoding="utf-8") as fh:
         job = json.load(fh)
     MARKER = os.path.join(os.path.dirname(job_file), "watchdog_fired.txt")
+    if os.name != "nt":
+        # Blender 4.2 starts Python without its signal setup, so SIGPIPE keeps the default action: a write to the
+        # pipe of a parent that is gone killed the worker at once, before the watchdog could leave its marker.
+        # Ignored, the write raises OSError and emit() ends the worker through die() (found on Linux, 2026-11-20).
+        import signal
+        signal.signal(signal.SIGPIPE, signal.SIG_IGN)
     threading.Thread(target=watchdog, daemon=True, args=(job["parent_pid"],)).start()
     package, run = load_pipeline()
     PREFIX = package.PROTOCOL_PREFIX
